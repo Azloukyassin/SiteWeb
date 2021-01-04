@@ -1,0 +1,76 @@
+﻿@model SiteWeb.User_Projet
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+
+<style>
+    .all {
+        padding-left: 450px;
+        padding-top: 170px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    body, html {
+        height: 100%;
+    }
+
+    body, html {
+        /* The image used */
+        background-image: url('../../Images/christelle-hayek-aw4lQ6U4HX8-unsplash.jpg');
+        /* Full height */
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .field-validation-error {
+        color: red;
+    }
+    .allbutton {
+        padding-left: 50px;
+    }
+</style>
+<body>
+    <div class="all">
+
+        <h2>Login</h2>
+
+
+        @using (Html.BeginForm("Autherize", "Login", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div>
+                @Html.LabelFor(model => model.email)
+                @Html.EditorFor(model => model.email)
+            </div>
+            <p>@Html.ValidationMessageFor(model => model.email)</p>
+
+            <div class="input-div two">
+                <div class="i">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div>
+                    <label>Password</label>
+                    @Html.EditorFor(model => model.password)
+                </div>
+
+                <p>@Html.ValidationMessageFor(model => model.password)</p>
+            </div>
+            <div class="allbutton">
+                <input type="submit" id="button" class="btn" name="name" value="Login" />
+                <a href="@Url.Action("AddOrEdit", "Eng")" class="btn btn-primary">Sign Up</a>
+
+            </div>
+            <label class="field-validation-error">@Html.DisplayFor(model => model.LoginErrorMessage)</label>
+        }
+    </div>
+</body>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

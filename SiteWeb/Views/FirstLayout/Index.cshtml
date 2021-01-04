@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<html>
+<head>
+    <title>Dashbord</title>
+</head>
+<body>
+    <style>
+        .vl {
+            border-left: 6px solid green;
+            margin-top: 20px;
+            margin-left: 80px;
+        }
+
+        #bild {
+            margin-right: 100px;
+            margin-top: 70px;
+        }
+
+        .allbutton {
+            margin-right: 5px;
+            margin-left: 20px;
+            margin-top: 70px;
+        }
+
+        #username {
+            margin-top: -1px;
+        }
+
+        #bild1 {
+            width: 500px;
+            height: 400px;
+            margin-left: 200px;
+            margin-top: 40px;
+        }
+ 
+        #GruppElement3 {
+            margin-left: 400px;
+            margin-top: 50px;
+        }
+
+        .btn {
+            margin-top: 10px;
+            margin-right: -10px;
+        }
+
+        #addbild1 {
+            margin-left: 20px;
+            ;
+        }
+
+        #GruppElement4{
+            margin-left: 600px;
+            margin-top: -10px;
+        }
+
+        #GruppElement2 {
+            margin-left: 900px;
+            margin-top: -145px;
+        }
+
+        html, body {
+            height:100%;
+        }
+
+        body, html {
+            /* The image used */
+            background-image: url('../../Images/annie-spratt-ORDz1m1-q0I-unsplash.jpg');
+            /* Full height */
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+    </style>
+    <body>
+
+        <a href="@Url.Action("Index", "Home")" class="btn btn-info"> LogOut</a>
+
+        <span id="all">
+            <div id="GruppElement3">
+                <img src="~/Images/file-upload.png" id="addbild1" width="100" height="100" />
+                <br />
+                <a href="@Url.Action("AddOrEdit", "Kommentar")" class="btn btn-success"> Commentar ecrire </a>
+            </div>
+            <div id="GruppElement4">
+                <img src="~/Images/idea.png" id="addbild1" width="100" height="100" />
+                <br />
+                <a href="@Url.Action("Index", "Kommentar")" class="btn btn-success">Commentar voir </a>
+            </div>
+
+        </span>
+    </body>
+</html>
+

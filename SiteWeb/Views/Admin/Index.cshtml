@@ -1,0 +1,41 @@
+﻿@model IEnumerable<SiteWeb.Commentar>
+
+
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Admin-Edit</h2>
+
+<table class="table">
+    <tr>      
+        <th>
+            @Html.DisplayNameFor(model => model.Commentar_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExerciceNr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Commentar1)
+        </th>
+        <th></th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Commentar_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExerciceNr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Commentar1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Commentar_id }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.Commentar_id  }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.Commentar_id  })
+        </td>
+    </tr>
+}
+</table>

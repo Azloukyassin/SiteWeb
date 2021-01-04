@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "ChoixIndex";
+}
+
+<h2>Bonjour</h2>
+
+<style>
+    #all {
+        position: fixed;
+        width: 500px;
+        height: 200px;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px; /* Negative half of height. */
+        margin-left: -250px; /* Negative half of width. */
+    }
+    body, html {
+        height:100%; 
+    }
+    body {
+        background-color : bisque; 
+    }
+    .btn {
+        margin-left:100px;
+    }
+</style>
+
+<body>
+    <span id="all">
+        <label>Matiere</label>
+        <select class="form-control form-control-lg">
+            <option>Electronique Analogique </option>
+            <option>Electrotechnique</option>
+            <option>Processus Aleatoire</option>
+            <option>Representation dEtat</option>
+            <option>Informatique Industrielle </option>
+            <option>Programmation </option>
+            <option>Thermique</option>
+            <option>Mecanique </option>
+        </select>
+
+
+        <label>Professeur</label>
+        <select class="form-control form-control-lg">
+            <option>Remy MOREAU</option>
+            <option>Mohammed ELHADI ZAIM</option>
+            <option>Mourad AIT AHMED </option>
+            <option>Luc LORON </option>
+            <option>David DELFIEU</option>
+            <option>Philippe POULLAIN</option>
+            <option>Salvy BOURGUET</option>
+            <option>Yoan GREINER </option>
+        </select>
+
+        <a href="@Url.Action("Index", "FirstLayout")" class="btn btn-primary">Go</a>
+
+    </span>
+</body>
